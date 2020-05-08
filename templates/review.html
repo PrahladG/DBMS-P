@@ -1,0 +1,6 @@
+<!DOCTYPE html>
+<h1>ALL REVIEWS</h1>
+<h2>Total Available Books related to Probability are: {{value|length}}</h2>
+{% for i in range(value|length) %}
+    <h2>{{value[i][0]}}</h2>
+{%endfor%}       

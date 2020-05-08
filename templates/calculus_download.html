@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGILIB</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='main.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static',filename='icon.png')}}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="{{url_for('static',filename='script.js')}}" defer></script>
+</head>
+<body>
+    <div class="arrow">
+    <a href="#"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></a>
+    </div>
+    <nav class="navbar">
+            <div class="title"><a href="#"><img src="{{url_for('static',filename='logoup.png')}}" alt=""></a></div>
+            <a href="#" class="toogleb">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="{{ url_for('main.team') }}">Team</a></li>
+                    <li><a href="{{ url_for('main.contact') }}">Contact</a></li>
+                    <li>
+                    {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('main.profile') }}" >Profile</a>
+                    {% endif %}
+                    </li>
+                    <li>
+                    {% if not current_user.is_authenticated %}
+                    <a href="{{ url_for('auth.login') }}" >
+                        Login
+                    </a>
+                    </li>
+                    <li>
+                    <a href="{{ url_for('auth.signup') }}">
+                        Sign Up
+                    </a>
+                    {% endif %}
+                    </li>
+                    <li>
+                    {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('auth.logout') }}">
+                        Logout
+                    </a>
+                    {% endif %}
+                    </li>
+                </ul>
+
+                </ul>
+            </div>
+        </nav>
+
+<table>
+    <tbody>
+        <h2>Total Available Books related to Calculus are: {{value|length}}</h2>
+        {% for i in range(value|length) %} 
+            <tr>     
+                <br>
+                <br>
+                <div class="container">
+                        {% if i==0 %}
+                        <u><h3>Most Recommended Book</h3></u>
+                        {% endif %}
+                
+                    <div class="container">
+                            <h2>{{value[i][0]}}</h2>   
+                            <form action="{{url_for('download.c_down')}}"method="POST">
+                            <input type="hidden" name="number" value="{{i}}">
+                            <button type="submit" class="btn btn-link">Link</button>
+                            </form>
+                            </h5>
+                            <br>
+                            </tr>
+                    </div>
+                                    
+                    <style type="text/css">
+                        .container                   {
+                            text-align: center;
+                            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                            margin-bottom: 30px;
+                            background-color: aquamarine;
+                            
+                        }
+                        h2{
+                        color: brown;
+                        }
+                        h5{
+                           background-color:darkgoldenrod;
+                        }
+                        h4{
+                            color: darkblue;
+                        }
+                        
+                        </style>
+                </div>
+            </tr>
+            {% endfor %}            
+    </tbody>
+</table>

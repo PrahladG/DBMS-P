@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{{url_for('static',filename='about.css')}}" type="text/css">
+  <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static',filename='icon.png')}}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="script.js" defer></script>
+  <title>TEAM</title>
+</head>
+<body>
+   <div class="arrow">
+      <a href="#"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></a>
+   </div>
+    <nav class="navbar">
+        <div class="title"><a href="#"><img src="{{url_for('static',filename='logoup.png')}}" alt=""></a></div>
+        <a href="#" class="toogleb">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="links">
+            <ul>
+                <li><a href="{{ url_for('main.home') }}">Home</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="{{ url_for('main.contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('main.profile') }}">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+            <h1>Meet Us</h1>
+            <br>          
+    </div>
+    <div class="box">
+        <div class="card">
+          <div class="imgBx">
+              <img src="{{url_for('static',filename='img4.jpg')}}"alt="">
+          </div>
+          <div class="details">
+              <h2>K PRAHLAD GOWTHAM<br><span>COE18B029</span></h2>
+              <ul>
+                <li><a href="https://www.linkedin.com/in/prahlad-gowtham-408a27194" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.instagram.com/prahlad.gowtham/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="https://github.com/darkprince-1" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+              </ul>
+          </div>
+        </div>
+      
+         <div class="card">
+           <div class="imgBx">
+              <img src="{{url_for('static',filename='img2.jpeg')}}" alt="">
+           </div>
+           <div class="details">
+              <h2>K V S MAHESH <br><span>COE18B032</span></h2>
+              <ul>
+                <li><a href="https://www.linkedin.com/in/kvsmahesh/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.instagram.com/kvs.mahesh/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="https://github.com/KvsMahesh" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+         </div>
+  
+  
+         <div class="card">
+          <div class="imgBx">
+             <img src="{{url_for('static',filename='img1.jpeg')}}" alt="">
+          </div>
+          <div class="details">
+             <h2>G HRUTHIK<br><span>COE18B023</span></h2>
+             <ul>
+              <li><a href="https://www.linkedin.com/in/gurugubelli-hruthik-a87357183" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.instagram.com/gurugubellihruthik/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+              <li><a href="https://github.com/HRUTHIK31" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+            </ul>
+           </div>
+        </div>
+  
+        <div class="card">
+          <div class="imgBx">
+             <img src="{{url_for('static',filename='img5.jpg')}}" alt="">
+          </div>
+          <div class="details">
+             <h2>G V ANURAG<br><span>COE18B018</span></h2>
+             <ul>
+              <li><a href="https://www.linkedin.com/in/anurag-guntupalli-2552591a9" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.instagram.com/anuragfowl/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+              <li><a href="https://github.com/anuragfowl" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+            </ul>
+           </div>
+        </div>
+  
+        <div class="card">
+          <div class="imgBx">
+             <img src="{{url_for('static',filename='img3.jpg')}}" alt="">
+          </div>
+          <div class="details">
+             <h2>G RITHIK RAJ<br><span>COE18B021</span></h2>
+             <ul>
+              <li><a href="https://www.linkedin.com/in/kvsmahesh/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+              <li><a href="https://www.instagram.com/kvs.mahesh/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+              <li><a href="https://github.com/KvsMahesh" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+            </ul>
+           </div>
+        </div>
+    </div>
+    <footer id="main-footer">
+        <p>&copy 2020 DIGILIB | Digital Library Website designed by CSE-18 batch | <a href="https://www.iiitdm.ac.in" target="_blank">IIITDM</a></p>   
+   </footer>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGILIB</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="{{url_for('static',filename='viewcourse.css')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static',filename='icon.png')}}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="{{url_for('static',filename='script.js')}}" defer></script>
+
+
+        <nav class="navbar">
+                <div class="title"><a href="#"><img src="{{url_for('static',filename='logoup.png')}}" alt=""></a></div>
+                <a href="#" class="toogleb">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                <div class="links">
+                    <ul>
+                        <li><a href="{{url_for('main.home')}}">Home</a></li>
+                        <li><a href="{{url_for('main.team')}}">Team</a></li>
+                        <li><a href="{{url_for('main.contact')}}">Contact</a></li>
+                        <li><a href="{{url_for('main.profile')}}">Profile</a></li>
+                    </ul>
+                </div>
+        </nav>
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+            <div class="container">
+            <div class="row">
+                {% for post in post %}
+                    <div class="col-sm">
+                        <div class="card" style="width: 18rem;"display="grid">
+                            <img class="card-img-top" src="static/{{post}}.jpg" alt="Card image cap"background='cover'>
+                            <div class="card-body">
+                            <form action="{{url_for('download.uploads')}}"method="post">
+                                <button type="button" class="btn btn-outline-info">
+                                <input type="submit" name="long" value="{{post}}" >
+                                </button>
+                            </form>
+                            </div>
+                        </div>  
+                    </div>  
+                {%endfor%}
+            </div>
+        </div>
+</body>
+<footer id="main-footer">
+    <p>&copy 2020 DIGILIB | Digital Library Website designed by CSE-18 batch | <a href="https://www.iiitdm.ac.in" target="_blank">IIITDM</a></p>   
+</footer>
+</html>

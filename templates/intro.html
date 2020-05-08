@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGILIB</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{{url_for('static',filename='icon.png')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='main.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='land.css')}}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="logo">
+    <img src="{{url_for('static',filename='logo.png')}}" alt="">
+    </div>
+    <div class="beg">
+        <h2>WE ARE DIGILIB</h2>
+        <a href="{{url_for('auth.login')}}" class="btn btn-info" role="button">Login</a>
+        <a href="{{url_for('auth.signup')}}" class="btn btn-danger" role="button">Join</a>
+    </div>
+    <div class="down">
+    <a href="#none" class="btn_down"><i class="fa fa-angle-double-down" aria-hidden="true"></i></a>
+    </div>
+    <div class="none" id="none"></div>
+    <div class="content" id="content">
+        <p>DIGILIB is a Digital Library Platform
+        A simple and easy platform for engineering students to gain knowledge and to get instant access to many of their courses with their respective textbooks through pdfs, 
+        effective online introduction video lectures.And not only that but this platform also offers students to share their respective notes 
+        if they feel that their notes would be useful for the respective course.And the students can also recommend us to add some rare books through contact form.And in this kind of way this
+        platform is very useful to students and easy to operate by the users as they can get any course they want instantly and accurately through the digital library system.
+        </p>
+    </div>
+    <div class="a">
+        <img src="{{url_for('static',filename='lol.jpg')}}" height="400px" width="700px">
+    </div>
+</body>
+</html>

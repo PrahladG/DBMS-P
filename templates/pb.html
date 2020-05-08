@@ -1,0 +1,51 @@
+{%extends 'basea.html'%}
+
+{%block content%}
+
+<div class="op">
+<div class="container">
+  <h1>HERE'S A VIDEO ON INTRODUCTION TO Probability</h1>
+  <iframe width="1060" height="515" src="https://www.youtube-nocookie.com/embed/1uW3qMFA9Ho"  
+  frameborder="0" allow="accelerometer; picture-in-picture" allowfullscreen></iframe>
+</div>
+</section>
+<style type="text/css">
+.op {
+  background-color: black;
+}
+
+h1{
+  color: cadetblue;
+}
+</style>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Upload your Files</h1>
+      <br>
+      <br>
+    <form class="" action="{{url_for('download.probability')}}" method="POST", enctype="multipart/form-data">
+    {{  form.hidden_tag()  }}
+    {{  form.file(class="btn btn-dark")    }}
+    {{  form.submit(class="btn btn-primary")  }}
+    </form>
+    <br>
+    <br>
+    <h5>*please Upload the relevant files else your file will be removed</h5>      
+    <br>
+    <h1 class="display-4">Download/View Books in Library</h1><h6>Related to Probability</h6>
+    <form  action="{{  url_for('download.pb_up')  }}" method="POST">
+        {{  form.download(class="btn btn-primary")   }}
+    </form>
+  </div>
+    <style type="text/css">
+    .container
+    {
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 10px;
+    }
+    
+    </style>
+  </div>
+
+{%endblock%}
